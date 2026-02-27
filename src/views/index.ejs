@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>URL Shortener</h1>
+        <p>Transform your long URLs into short, shareable links</p>
+      </header>
+
+      <main class="main-content">
+        <form id="urlForm" class="url-form">
+          <div class="input-group">
+            <input
+              type="url"
+              id="originalURL"
+              name="originalURL"
+              placeholder="Enter your long URL here..."
+              required
+              class="url-input"
+            />
+            <button type="submit" class="shorten-btn">Shorten URL</button>
+          </div>
+        </form>
+
+        <div id="result" class="result-container" style="display: none">
+          <div class="result-card">
+            <h3>Your shortened URL:</h3>
+            <div class="url-result">
+              <input
+                type="text"
+                id="shortURL"
+                readonly
+                class="short-url-input"
+              />
+              <button id="copyBtn" class="copy-btn">Copy</button>
+            </div>
+            <p class="success-message">URL shortened successfully!</p>
+          </div>
+        </div>
+
+        <div id="error" class="error-container" style="display: none">
+          <div class="error-card">
+            <h3>Error</h3>
+            <p id="errorMessage"></p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; 2025 URL Shortener. Made with ❤️</p>
+      </footer>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
